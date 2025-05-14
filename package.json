@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "tw": "npx tailwindcss -i ./static/css/input.css -o ./static/css/style.css --watch",
+    "dev": "tailwindcss -i ./static/core/css/src/input.css -o ./static/core/css/output.css --watch",
+    "build": "tailwindcss -i ./static/core/css/src/input.css -o ./static/core/css/output.css --minify && copy static\\core\\css\\output.css staticfiles\\css\\output.css && echo Build selesai pada %date% %time% && node -e \"require('node-notifier').notify({ title: 'Tailwind Build', message: '✅ output.css berhasil disalin ke staticfiles/css' })\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -35,6 +36,7 @@
   "description": "",
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "node-notifier": "^10.0.1",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17"
   }

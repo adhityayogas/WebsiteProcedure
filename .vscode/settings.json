@@ -1,4 +1,8 @@
 {
-    "workbench.colorTheme": "Noctis Minimus"
-    "workbench.iconTheme": "vscode-icons"
+  "workbench.colorTheme": "Noctis Minimus",
+  "workbench.iconTheme": "vscode-icons",
+  "css.lint.vendorPrefix": "ignore",
+  "css.lint.propertyIgnoredDueToDisplay": "ignore"
+
+
 }
